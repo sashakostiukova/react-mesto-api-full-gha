@@ -2,6 +2,7 @@ const express = require('express');
 const { json } = require('express');
 const mongoose = require('mongoose');
 const helmet = require('helmet');
+const cors = require('cors');
 const { errors } = require('celebrate');
 const { config } = require('./config');
 const { router } = require('./routes');
@@ -11,6 +12,8 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 const app = express();
 
 mongoose.connect(config.MONGO_URL);
+
+app.use(cors({ origin: '*', credentials: true, maxAge: 30 }));
 
 app.use(json());
 app.use(helmet());
