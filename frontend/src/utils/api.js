@@ -21,26 +21,29 @@ class Api {
 
   getAllCards(jwt) {
     return this._request('/cards', {
-      // headers: this._headers,
-      headers: { "Content-Type": "application/json",
-      authorization: `Bearer ${jwt}`, }
+      headers: {
+        "Content-Type": "application/json",
+        authorization: `Bearer ${jwt}`,
+      }
     });
   }
 
   getUserInfo(jwt) {
     return this._request('/users/me', {
-      headers: { "Content-Type": "application/json",
-               authorization: `Bearer ${jwt}`, }
+      headers: {
+        "Content-Type": "application/json",
+        authorization: `Bearer ${jwt}`,
+      }
     });
   }
 
   editUserInfo({name, about}, jwt) {
     return this._request('/users/me', {
       method: 'PATCH',
-      // headers: this._headers,
-      headers: { "Content-Type": "application/json",
-      authorization: `Bearer ${jwt}`, },
-
+      headers: {
+        "Content-Type": "application/json",
+        authorization: `Bearer ${jwt}`,
+      },
       body: JSON.stringify({
         name: name,
         about: about
@@ -51,9 +54,10 @@ class Api {
   addCard({name, link}, jwt) {
     return this._request('/cards', {
       method: 'POST',
-      // headers: this._headers,
-      headers: { "Content-Type": "application/json",
-      authorization: `Bearer ${jwt}`, },
+      headers: {
+        "Content-Type": "application/json",
+        authorization: `Bearer ${jwt}`,
+      },
       body: JSON.stringify({
         name: name,
         link: link
@@ -64,36 +68,40 @@ class Api {
   deleteCard(cardId, jwt) {
     return this._request(`/cards/${cardId}`, {
       method: 'DELETE',
-      // headers: this._headers,
-      headers: { "Content-Type": "application/json",
-      authorization: `Bearer ${jwt}`, },
+      headers: {
+        "Content-Type": "application/json",
+        authorization: `Bearer ${jwt}`,
+      },
     });
   }
 
   like(cardId, jwt) {
     return this._request(`/cards/${cardId}/likes`, {
       method: 'PUT',
-      // headers: this._headers,
-      headers: { "Content-Type": "application/json",
-      authorization: `Bearer ${jwt}`, },
+      headers: {
+        "Content-Type": "application/json",
+        authorization: `Bearer ${jwt}`,
+      },
     });
   }
 
   deleteLike(cardId, jwt) {
     return this._request(`/cards/${cardId}/likes`, {
       method: 'DELETE',
-      // headers: this._headers,
-      headers: { "Content-Type": "application/json",
-      authorization: `Bearer ${jwt}`, },
+      headers: {
+        "Content-Type": "application/json",
+        authorization: `Bearer ${jwt}`,
+      },
     });
   }
 
   updateAvatar(link, jwt) {
     return this._request('/users/me/avatar', {
       method: 'PATCH',
-      // headers: this._headers,
-      headers: { "Content-Type": "application/json",
-      authorization: `Bearer ${jwt}`, },
+      headers: {
+        "Content-Type": "application/json",
+        authorization: `Bearer ${jwt}`,
+      },
       body: JSON.stringify({
         avatar: link
       })
@@ -102,13 +110,6 @@ class Api {
   
 }
 
-// const apiConfig = {
-//   url: 'https://mesto.nomoreparties.co/v1/cohort-74',
-//   headers: {
-//     "Content-Type": "application/json",
-//     authorization: '1d3a749f-f7d8-44c4-ad86-87f3a5b73fd2',
-//   }
-// };
 const apiConfig = {
   url: 'https://api.sashakostiukova.nomoredomainsmonster.ru',
   headers: {

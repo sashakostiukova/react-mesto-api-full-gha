@@ -1,6 +1,5 @@
 import { setToken } from './token';
 
-// export const BASE_URL = 'https://auth.nomoreparties.co';
 export const BASE_URL = 'https://api.sashakostiukova.nomoredomainsmonster.ru';
 
 function getResponseData(res) {

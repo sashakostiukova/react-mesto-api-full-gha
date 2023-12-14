@@ -13,7 +13,6 @@ const NotAuthentificatedError = require('../errors/unauthorized-error');
 const ConflictError = require('../errors/conflict-error');
 
 module.exports.getUsers = async (req, res, next) => {
-  console.log('контролллер запроса пользователей');
   try {
     const users = await User.find({});
     return res.send(users);

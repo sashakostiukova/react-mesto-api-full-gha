@@ -44,7 +44,6 @@ function App() {
       .then((res) => {
         if (res) {
           setLoggedIn(true);
-          // setUserEmail(res.data.email);
           setUserEmail(res.email);
         }
       })
@@ -65,8 +64,8 @@ function App() {
 
   React.useEffect(() => {
     if (loggedIn) {
-      const jwt = localStorage.getItem('jwt'); ///////////
-      api.getUserInfo(jwt) ////////
+      const jwt = localStorage.getItem('jwt');
+      api.getUserInfo(jwt)
       .then((data) => {
         setCurrentUser(data);
       })
@@ -74,7 +73,8 @@ function App() {
 
       api.getAllCards(jwt)
       .then((cards) => {
-        setCards(cards);
+        const reversedCards = cards.reverse();
+        setCards(reversedCards);
       })
       .catch(console.error); 
     }
@@ -148,7 +148,7 @@ function App() {
   };
 
   function handleCardLike(card) {
-    const isLiked = card.likes.some(i => i._id === currentUser._id);
+    const isLiked = card.likes.some(i => i === currentUser._id);
     const jwt = localStorage.getItem('jwt');
 
     if (!isLiked) {
@@ -180,7 +180,7 @@ function App() {
     function makeRequest() {
       const jwt = localStorage.getItem('jwt');
       
-      return api.editUserInfo(data, jwt).then(setCurrentUser); //////
+      return api.editUserInfo(data, jwt).then(setCurrentUser);
     };
 
     handleSubmit(makeRequest);
