@@ -13,8 +13,6 @@ class Api {
   }
 
   _request(endpoint, options) {
-    console.log(options); //////////////////
-
     return fetch(`${this._url + endpoint}`, options)
       .then(this._getResponse)
   }

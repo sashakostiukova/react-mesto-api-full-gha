@@ -6,8 +6,6 @@ export default function Card({card, onCardClick, onCardLike, onCardDeleteClick})
   const currentUser = React.useContext(CurrentUserContext);
 
   const isOwn = card.owner === currentUser._id;
-  console.log(card.owner);
-  console.log(currentUser._id);
 
   const isLiked = card.likes.some(i => i === currentUser._id);
   const cardLikeButtonClassName = ( 

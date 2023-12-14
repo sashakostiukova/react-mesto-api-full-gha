@@ -27,6 +27,7 @@ export default function EditAvatarPopup({isOpen, onUpdateAvatar}) {
 
   React.useEffect(() => {
     reset();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 
   function handleSubmitUpdateAvatarForm(data) {

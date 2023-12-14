@@ -9,6 +9,7 @@ export default function AddPlacePopup({isOpen, onAddPlace}) {
 
   React.useEffect(() => {
     reset();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 
   const {

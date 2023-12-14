@@ -60,6 +60,7 @@ function App() {
 
   React.useEffect(() => {
     if (loggedIn) navigate('/');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loggedIn]);
 
   React.useEffect(() => {

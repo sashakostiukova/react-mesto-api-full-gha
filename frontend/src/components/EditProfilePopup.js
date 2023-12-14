@@ -11,6 +11,7 @@ export default function EditProfilePopup({isOpen, onUpdateUser}) {
 
   React.useEffect(() => {
     reset();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 
   const {

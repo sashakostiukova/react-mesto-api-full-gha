@@ -8,18 +8,17 @@ const { config } = require('./config');
 const { router } = require('./routes');
 const { handleError } = require('./middlewares/handleError');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
-// "start": "node app.js",
+
 const app = express();
 
 mongoose.connect(config.MONGO_URL);
 
 app.use(cors({ origin: ['http://localhost:3000', 'https://sashakostiukova.nomoredomainsmonster.ru'], maxAge: 30 }));
-// app.use(cors());
 
 app.use(json());
 app.use(helmet());
 
-app.use(requestLogger); // подключаем логгер запросов
+app.use(requestLogger);
 
 app.get('/crash-test', () => {
   setTimeout(() => {
@@ -28,10 +27,8 @@ app.get('/crash-test', () => {
 });
 
 app.use(router);
-app.use(errorLogger); // подключаем логгер ошибок
+app.use(errorLogger);
 app.use(errors());
 app.use(handleError);
-
-// app.listen(config.PORT);
 
 module.exports = { app };
