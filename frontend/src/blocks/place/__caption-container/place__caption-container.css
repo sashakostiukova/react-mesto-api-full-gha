@@ -1,0 +1,6 @@
+.place__caption-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 25px 20px;
+}

@@ -50,7 +50,7 @@ module.exports.getUser = async (req, res, next) => {
       .status(SUCCESS_CODE_OK)
       .send(
         {
-          name: user.name, about: user.about, avatar: user.avatar, email: user.email,
+          name: user.name, about: user.about, avatar: user.avatar, email: user.email, _id: user._id,
         },
       );
   } catch (error) {

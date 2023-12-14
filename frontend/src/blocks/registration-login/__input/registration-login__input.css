@@ -1,0 +1,16 @@
+.registration-login__input {
+  background: #000000;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  color: #CCCCCC;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  display: block;
+  width: 358px;
+  height: 14px;
+  border: none;
+  border-bottom: 2px solid #CCCCCC;
+  margin-bottom: 30px;
+  padding: 0;
+  padding-bottom: 13px;
+}

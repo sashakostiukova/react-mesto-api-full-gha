@@ -1,0 +1,10 @@
+.place__image {
+  display: block;
+  width: 100%;
+  height: 78%;
+  min-height: 282px;
+  object-fit: cover;
+}
+.place__image:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,10 @@
+.popup-imageview__caption {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 12px;
+  line-height: normal;
+  max-width: 75vw;
+  box-sizing: border-box;
+}

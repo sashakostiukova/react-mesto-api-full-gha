@@ -1,0 +1,6 @@
+.registration-login__button_disabled {
+  border: 1px solid #FFFFFF90;
+  background: #000000 ;
+  color: #FFFFFF90;
+  cursor: default;
+}

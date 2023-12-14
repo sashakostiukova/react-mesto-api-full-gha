@@ -1,0 +1,24 @@
+.popup__error {
+  display: block;
+  opacity: 0;
+  color: #F00000;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  height: 29px;
+}
+
+.popup__error:last-of-type {
+  height: 48px;
+}
+
+@media screen and (max-width: 640px) {
+  .popup__error {
+    height: 31px;
+  }
+  .popup__error:last-of-type {
+    height: 46px;
+  }
+}

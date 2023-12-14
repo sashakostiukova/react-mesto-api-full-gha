@@ -1,0 +1,13 @@
+.profile__info {
+  padding-top: 22px;
+  display: flex;
+  gap: 18px;
+  align-items: baseline;
+  position: relative;
+}
+
+@media screen and (max-width: 425px) {
+  .profile__info {
+    padding-top: 0;
+  }
+}
