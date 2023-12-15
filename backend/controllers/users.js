@@ -93,7 +93,13 @@ module.exports.updateUser = async (req, res, next) => {
     const id = req.user._id;
     const updatedUser = await User
       .findByIdAndUpdate(id, { name, about }, { new: true, runValidators: true });
-    return res.status(SUCCESS_CODE_OK).send({ name: updatedUser.name, about: updatedUser.about });
+    // return res.status(SUCCESS_CODE_OK).send({ name: updatedUser.name, about: updatedUser.about });
+    return res.status(SUCCESS_CODE_OK).send({
+      name: updatedUser.name,
+      about: updatedUser.about,
+      avatar: updatedUser.avatar,
+    });
+    // return res.status(SUCCESS_CODE_OK).send(updatedUser);
   } catch (error) {
     if (error instanceof mongoose.Error.ValidationError) {
       next(new BadRequestError('Ошибка валидации полей'));
@@ -109,7 +115,9 @@ module.exports.updateAvatar = async (req, res, next) => {
     const id = req.user._id;
     const updatedUser = await User
       .findByIdAndUpdate(id, { avatar }, { new: true, runValidators: true });
-    return res.status(SUCCESS_CODE_OK).send({ avatar: updatedUser.avatar });
+    // return res.status(SUCCESS_CODE_OK).send({ avatar: updatedUser.avatar });
+    return res.status(SUCCESS_CODE_OK).send(updatedUser);
+    // return res.status(SUCCESS_CODE_OK).send(await updatedUser.save());
   } catch (error) {
     if (error instanceof mongoose.Error.ValidationError) {
       next(new BadRequestError('Ошибка валидации полей'));
