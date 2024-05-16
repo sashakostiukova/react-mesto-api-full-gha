@@ -16,7 +16,7 @@
 * JavaScript
 * React
 * MongoDB
-* Express
+* Express.js
 
 Данные пользователя загружаются с сервера:
 
