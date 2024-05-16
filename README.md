@@ -1,14 +1,51 @@
-[![Статус тестов](../../actions/workflows/tests.yml/badge.svg)](../../actions/workflows/tests.yml)
+# __Проект: Место.
+<img src="./frontend//src/images/README-header.png" alt="Скриншот шапки сайта">
 
-# react-mesto-api-full
-Репозиторий для приложения проекта `Mesto`, включающий фронтенд и бэкенд части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями.
+*Проектная работа на курсе по веб-разработке от [Яндекс-практикума](https://practicum.yandex.ru/ "Перейти на сайт практикума")*
 
-Адрес репозитория: https://github.com/sashakostiukova/react-mesto-api-full-gha.git
+## Обзор
 
-## Ссылки на проект
+Проект интерактивного сервиса о путешествиях по России, выполненный на основе [макета](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1 "Посмотреть макет") в Figma. 
 
-IP 158.160.83.220
+Для реализации проекта были использованы: библиотека React, технологии Grid Layout, flexbox, а также применены медиазапросы.
 
-Frontend https://sashakostiukova.nomoredomainsmonster.ru
+## Стек технологий:
 
-Backend https://api.sashakostiukova.nomoredomainsmonster.ru
+* HTML
+* CSS
+* JavaScript
+* React
+* MongoDB
+* Express
+
+Данные пользователя загружаются с сервера:
+
+<img src="./frontend/src/images/README-editpopup.png" alt="скриншот формы редактирования профиля">
+
+Карточки мест также отрисовываются после получения ответа от сервера:
+
+<img src="./frontend/src/images/README-addpopup.png" alt="скриншот формы создания новой карточки">
+
+Изображение из карточки можно увеличить, кликнув по нему:
+
+<img src="./frontend/src/images/README-imageview.png" alt="скриншот попапа просмотра изображения карточки">
+
+Реализовано плавное открытие и закрытие попапов. Любой попап можно закрыть кликнув на крестик.
+
+## Последние обновления
+
+На сайте теперь можно зарегистрироваться и авторизоваться:
+
+<img src="./frontend/src/images/README-registration.png" alt="скриншот формы регистрации пользователя">
+<img src="./frontend/src/images/README-header-email.png" alt="скриншот шапки сайта авторизованного пользователя">
+
+Если при регистрации произошла ошибка, пользователь увидит всплывающее окно с информацией:
+
+<img src="./frontend/src/images/README-registration-error.png" alt="скриншот ошибки регистрации">
+
+Пользователь может создавать свои карточки мест и удалять их. 
+Также можно ставить "лайки" карточкам и убирать их, если мнение изменилось.
+
+## __Связаться со мной__
+sashakostiukova@yandex.ru
+

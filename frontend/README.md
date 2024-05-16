@@ -39,4 +39,3 @@
 
 ## __Связаться со мной__
 sashakostiukova@yandex.ru
-delete
