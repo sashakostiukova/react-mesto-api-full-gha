@@ -13,7 +13,7 @@ const app = express();
 
 mongoose.connect(config.MONGO_URL);
 
-app.use(cors({ origin: ['http://localhost:3000', 'https://sashakostiukova.nomoredomainsmonster.ru'], maxAge: 30 }));
+app.use(cors({ origin: ['http://localhost:3001', 'http://localhost:3000'], maxAge: 30 }));
 
 app.use(json());
 app.use(helmet());

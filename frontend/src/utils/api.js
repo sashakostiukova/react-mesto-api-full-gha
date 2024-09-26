@@ -109,7 +109,7 @@ class Api {
 }
 
 const apiConfig = {
-  url: 'https://api.sashakostiukova.nomoredomainsmonster.ru',
+  url: 'http://localhost:3001',
   headers: {
     "Content-Type": "application/json"
   }
